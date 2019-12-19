@@ -1,0 +1,76 @@
+@import 'vars';
+@import 'fonts';
+@import 'libs';
+@import 'mixins';
+@import 'main.scss';
+//  Header
+.header {
+  background-color: $clr-accent;
+  background-image: url(../img/header-bg.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  color: $clr-primary;
+  a {
+    color: $clr-primary;
+  }
+  & .container {
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+  }
+  &__logo {
+    width: 125px;
+    height: 32px;
+    margin-top: 7.25rem;
+    a {
+      font-size: rem(30);
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+  }
+  &__wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__content {
+    text-align: right;
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  &__text {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+// About-us
+.about-us {
+  padding-top: 3.25em;
+  padding-bottom: 3.5em;
+  text-align: center;
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: rem(30);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  &__image {
+    margin: 0 auto 1em;
+  }
+  &__slogan {
+    margin-bottom: 1em;
+    font-size: rem(18);
+  }
+  &__desc {
+    font-size: rem(14);
+    text-align: left;
+  }
+}
