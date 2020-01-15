@@ -39,11 +39,8 @@
     text-align: right;
   }
   &__title {
-    margin-top: 0;
-    margin-bottom: 0.5em;
     font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+    color: $clr-primary;
   }
   &__text {
     font-size: 1.5rem;
@@ -55,13 +52,6 @@
   padding-top: 3.25em;
   padding-bottom: 3.5em;
   text-align: center;
-  &__title {
-    margin-top: 0;
-    margin-bottom: 0.5em;
-    font-size: rem(30);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-  }
   &__image {
     margin: 0 auto 1em;
   }
@@ -72,5 +62,77 @@
   &__desc {
     font-size: rem(14);
     text-align: left;
+  }
+}
+// Stats
+.stats {
+  padding-top: 5.75em;
+  padding-bottom: 6.25em;
+  background-image: url(../img/stats-bg.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  color: $clr-primary;
+  text-align: center;
+  &__desc {
+    margin-bottom: 4.25em;
+    font-size: rem(18);
+  }
+  &__list {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+  }
+  &__item {
+    flex-basis: 33%;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  &__num,
+  &__text {
+    display: block;
+  }
+  &__num {
+    font-size: 4.5rem;
+    margin-bottom: 0.15em;
+  }
+  &__text {
+    max-width: 65%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+}
+// Showcase
+.showcase {
+  padding-top: 3em;
+  padding-bottom: 4.5em;
+  text-align: center;
+  &__slogan {
+    margin-bottom: 4.25em;
+    font-size: rem(18);
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 4.75em;
+    grid-row-gap: 1.75em;
+  }
+  &-card {
+    display: grid;
+    justify-items: center;
+    &__title {
+      margin: 0;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+    &__price {
+      margin-bottom: 0.25em;
+      font-size: rem(30);
+    }
+    &__link {
+      font-size: rem(18);
+      text-decoration: underline;
+    }
   }
 }

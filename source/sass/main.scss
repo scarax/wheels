@@ -13,7 +13,7 @@ body {
   line-height: 1.2;
   font-weight: 600;
   letter-spacing: 2px;
-  color: $clr-accent;
+  color: $clr-text;
   background-color: $clr-secondary;
   overflow-x: hidden;
 }
@@ -23,7 +23,7 @@ img {
   height: auto;
 }
 a {
-  color: $clr-accent;
+  color: $clr-text;
   text-decoration: none;
 }
 input,
@@ -58,4 +58,12 @@ ul[class] {
   padding-right: $gutter;
   margin-left: auto;
   margin-right: auto;
+}
+.headline {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: rem(30);
+  color: $clr-accent;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
