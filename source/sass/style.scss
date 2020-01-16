@@ -12,7 +12,7 @@
   background-size: cover;
   color: $clr-primary;
   a {
-    color: $clr-primary;
+    color: inherit;
   }
   & .container {
     display: flex;
@@ -207,5 +207,60 @@
       color: $clr-accent;
       text-decoration: underline;
     }
+  }
+}
+// Footer
+.footer {
+  padding-top: 3.25em;
+  padding-bottom: 5.75em;
+  background-color: $clr-accent;
+  color: $clr-primary;
+  font-size: rem(18);
+  text-transform: uppercase;
+  a {
+    color: inherit;
+  }
+  &__logo {
+    margin-bottom: 3em;
+    font-size: rem(30);
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__block-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    a:hover {
+      text-decoration: underline;
+      opacity: 0.75;
+    }
+  }
+  &__column {
+    padding-right: 1em;
+  }
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+  }
+  &__list li:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+  &__social {
+    display: flex;
+    flex-flow: wrap;
+    li:not(:last-child) {
+      margin-right: 0.5em;
+    }
+  }
+}
+.social-links {
+  li {
+    margin-bottom: 0.5em;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include size(30px);
   }
 }
