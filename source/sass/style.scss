@@ -136,3 +136,76 @@
     }
   }
 }
+// Team
+.team {
+  padding-top: 3em;
+  padding-bottom: 3.25em;
+  background-color: $clr-primary;
+  color: $clr-accent;
+  text-align: center;
+  &__desc {
+    margin-bottom: 3.25em;
+    font-size: rem(18);
+  }
+  &__list {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+  }
+  &__item {
+    flex-basis: 33%;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  &__image {
+    @include size(218px);
+    margin: 0 auto 2em;
+  }
+  &__name,
+  &__position {
+    display: block;
+    text-transform: uppercase;
+  }
+  &__name {
+    margin-bottom: 0.5em;
+    font-size: rem(30);
+    font-weight: 800;
+  }
+  &__position {
+    max-width: 65%;
+    margin: 0 auto;
+    font-size: rem(18);
+  }
+}
+// Network
+.network {
+  padding-top: 4em;
+  padding-bottom: 3.25em;
+  color: $clr-accent;
+  text-align: center;
+  &__slogan {
+    margin-bottom: 3.25em;
+    font-size: rem(18);
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+    margin-bottom: 4em;
+  }
+  &__image {
+    @include size(385px);
+    object-fit: cover;
+  }
+  &__text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: $clr-text;
+    text-transform: uppercase;
+    a {
+      color: $clr-accent;
+      text-decoration: underline;
+    }
+  }
+}
