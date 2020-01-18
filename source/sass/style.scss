@@ -3,8 +3,56 @@
 @import 'libs';
 @import 'mixins';
 @import 'main.scss';
-//  Header
+// Header
 .header {
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  background-color: $clr-secondary;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
+  &-scrolled {
+    display: block;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 82px;
+  }
+  &__logo {
+    display: flex;
+    flex-shrink: 0;
+    a {
+      font-size: rem(30);
+      font-weight: 800;
+      text-transform: uppercase;
+      color: $clr-accent;
+      &:hover,
+      &:focus {
+        color: red;
+      }
+    }
+  }
+}
+.main-nav {
+  flex-grow: 1;
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: wrap;
+  }
+  &__item {
+    margin-left: 5em;
+    a:hover,
+    a:focus {
+      color: red;
+    }
+  }
+}
+// Intro
+.intro {
   background-color: $clr-accent;
   background-image: url(../img/header-bg.png);
   background-repeat: no-repeat;
@@ -20,14 +68,10 @@
     min-height: 100vh;
   }
   &__logo {
-    width: 125px;
-    height: 32px;
     margin-top: 7.25rem;
-    a {
-      font-size: rem(30);
-      font-weight: 800;
-      text-transform: uppercase;
-    }
+    font-size: rem(30);
+    font-weight: 800;
+    text-transform: uppercase;
   }
   &__wrapper {
     flex-grow: 1;
@@ -74,6 +118,9 @@
   background-size: cover;
   color: $clr-primary;
   text-align: center;
+  .headline {
+    color: inherit;
+  }
   &__desc {
     margin-bottom: 4.25em;
     font-size: rem(18);
@@ -133,6 +180,10 @@
     &__link {
       font-size: rem(18);
       text-decoration: underline;
+      &:hover,
+      &:focus {
+        color: red;
+      }
     }
   }
 }
@@ -197,6 +248,10 @@
   &__image {
     @include size(385px);
     object-fit: cover;
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 250ms ease-out;
+    }
   }
   &__text {
     font-size: 1.5rem;
@@ -230,7 +285,8 @@
   &__block-group {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    a:hover {
+    a:hover,
+    a:focus {
       text-decoration: underline;
       opacity: 0.75;
     }
