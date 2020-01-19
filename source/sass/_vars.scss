@@ -4,5 +4,10 @@ $clr-accent: #1e1e1e;
 $clr-primary: #ededed;
 $clr-secondary: #fff;
 
-$grid-gutter-width: 96px;
+$grid-gutter-width: 24px;
 $gutter: $grid-gutter-width;
+
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;

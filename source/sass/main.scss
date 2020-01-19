@@ -54,10 +54,18 @@ ul[class] {
 }
 .container {
   max-width: 1536px;
-  padding-left: $gutter;
-  padding-right: $gutter;
+  padding-left: $gutter * 4;
+  padding-right: $gutter * 4;
   margin-left: auto;
   margin-right: auto;
+  @media (max-width: $screen-xl) {
+    padding-left: $gutter * 2;
+    padding-right: $gutter * 2;
+  }
+  @media (max-width: $screen-md) {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
 }
 .headline {
   margin-top: 0;
